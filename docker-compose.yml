@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  app:
+    image: igorhaf/php:latest
+    volumes:
+      - "./src:/var/www/html"
+      - "./default.conf:/etc/nginx/conf.d/default.conf"
+    ports:
+      - "80:80"
