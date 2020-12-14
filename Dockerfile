@@ -160,6 +160,10 @@ RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev lib
   apk del --no-cache freetype-dev libpng-dev libjpeg-turbo-dev
 
 RUN docker-php-ext-enable sodium
+
+RUN docker-php-ext-configure exif
+RUN docker-php-ext-install exif
+
 RUN docker-php-ext-configure zip
 RUN docker-php-ext-install zip
 
